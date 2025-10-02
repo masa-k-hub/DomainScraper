@@ -1,0 +1,11 @@
+{% extends "base/diary_base.html" %}
+{% block body%}
+
+<h2>{{ pate.title }}</h2>
+<div>{{ page.page_date }}</div>
+<div>{{ page.body | linebreaksbr }}</div>
+{% if page.picture %}
+    <img src="{{ page.picture.url }}" alt="写真">
+{% endif %}
+
+{% endblock %}  
